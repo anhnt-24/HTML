@@ -1,0 +1,119 @@
+/* Our custom */
+*{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    
+}
+
+body,li,ul,p,a,button,h2,h3{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+input{
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+:root{
+    --primary: #a4cfa5;
+    --font:rgb(71, 71, 71);
+    --font-on-b: rgb(82 84 80);
+    --font-on-h:rgb(65, 65, 65);
+    --bg-color:#f8f8f8;
+    --footer-color:black;
+    --blue:rgb(57 72 132);
+    --background-color: #f6faf480;
+}
+.row{
+    margin: 0 -12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+.collumn-2{
+    width: 50%;
+    margin: 0 12px;
+}
+
+.collumn-4{
+    width: 23%;
+    margin: 0 12px;
+}
+.collumn-3{
+    width: 30%;
+    margin: 0 12px;
+}
+.collum-6{
+    width: 66.7%;
+    margin: 0 12px;
+}
+.text_bolder{
+    font-weight: bold;
+}
+.main__container{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 80px 46px;
+    min-height: 400px;
+  
+}
+.btn_hover:hover{
+    filter: brightness(80%);
+    cursor: pointer;
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+@keyframes ease_in {
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
+}
+@keyframes ease_in_out {
+    from{
+        scale: 1;
+        
+    }
+    to{
+        scale: 0;
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0.5;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes fadeInNotScale{
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,133 @@
+/* LOGIN */
+#login{
+    width: 500px; ;
+    height: 400px;
+    background-color: var(--primary);
+    border-radius: 4px;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 115px;
+    display: flex;
+    animation: 0.3s fadeIn ease;
+}
+.login_signup-btn{
+    position: absolute;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    top:37px;
+    font-size: medium;
+    font-weight: 600;
+    color: var(--blue);
+
+}
+.login__form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.login__title{
+    margin-bottom: 24px;
+    height: 70px;
+    color: var(--font);
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid var(--bg-color);
+    align-content: center;
+}
+.login__input{
+    padding-left: 6px;
+    height: 40px;
+    margin: 6px 0;
+    width: 300px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2px;
+}
+.login__btn-container{
+    width: 310px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+.login__btn{
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color:var(--font);
+    color: var(--bg-color)
+}
+.login__fb{
+    padding: 12px;
+    width: 270px;
+    margin: 12px 0;
+    margin-top: 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #1877F2;
+    color: var(--bg-color);
+    position: relative;
+}
+.login__google{
+    padding: 12px;
+    width: 270px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 48px;
+    position: relative;
+    background-color: #f4f4f4;
+
+
+}
+.login__google img,
+.login__fb img{
+    height: 30px;
+    position: absolute;
+    top:5px;
+    left: 10px;
+
+}
+
+
+/*SIGN UP */
+
+#signup{
+    width: 500px; ;
+    height: 500px;
+    background-color: var(--primary);
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 115px;
+    animation: 0.3s fadeIn ease;
+    margin-bottom: -50px;
+}
+.signup__btn{
+    margin-bottom: 24px;
+    width: 308px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color:var(--font);
+    color: var(--bg-color);
+}
+.signup__login{
+    font-size: 1.1rem;
+    color: #1877F2;
+    margin-bottom: 20px;
+}
+.login-signup__active{
+    display: flex !important;
+}

@@ -1,0 +1,121 @@
+#payment{
+    width: 80%;
+    
+}
+.payment__form{
+    background-color: #f6faf480;
+    padding-left: 24px;
+    padding-bottom: 24px;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+.payment__form-order{
+    margin-bottom: 24px;
+
+}
+.payment__form-method{
+    width: 606px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.8rem;
+   
+}
+.payment__form-method-container{
+
+}
+.payment__container{
+
+}
+.payment__header{
+    align-self: flex-start;
+    font-size: 1.3rem;
+}
+.payment__form{
+
+}
+.payment__form-group{
+
+}
+.payment__label{
+
+}
+.payment__order-summary{
+    line-height: 1.4rem;
+    padding-left: 12px;
+    height:120px ;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--primary);
+    align-items: center;
+    margin: 20px 0;
+}
+.payment__image{
+    width: 100px;
+}
+.payment__price-container{
+  padding-right:  20px;
+  margin-left: 66px;
+    
+}
+
+.payment__price{
+    color: red;
+}
+.payment__price--strike{
+
+}
+.payment__discount{
+    margin: 42px 0;
+
+
+}
+.payment__input{
+    width: 600px;
+    height: 30px;
+    border: 1.5px solid black;
+
+}
+.payment__select{
+    width: 608px;
+    border: 1.5px solid black;
+    height: 35px;
+    margin-bottom: 14px;
+    color: #757575;
+    
+}
+.payment__summary-container{
+    border-top: 2px dashed black;
+    padding-top: 12px;
+}
+.payment__summary{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.6rem;
+    
+}
+.payment__total{
+    border-top: 2px dashed black;
+    padding-top: 12px;
+}
+
+.payment__button{
+    float: right;
+    cursor: pointer;
+    height: 35px;
+    width: 200px;
+    border-radius: 2px;
+    background-color: var(--primary);
+    align-self: flex-end;
+    margin-top: 24px;
+    font-size: 1.1rem;
+    color: var(--font);
+}
+.payment__button:hover{
+    filter: brightness(95%);
+}
+            

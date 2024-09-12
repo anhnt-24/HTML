@@ -1,0 +1,62 @@
+#user{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.user__container{
+    align-self: center;
+    display: flex;
+    margin-top: 24px;
+
+}
+.user__header{
+
+}
+.user__subheader{
+
+}
+.user__form{
+    border-right: 1px solid rgb(216, 216, 216);
+    padding-right: 24px;
+}
+.user__form-group{
+
+}
+.user__button{
+    background-color: var(--primary);
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    margin-top: 12px;
+    float: right;
+}
+.user__profile-picture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 24px;
+}
+.user__image{
+    margin-bottom: 26px;
+    width: 100px;
+    border-radius: 50%;
+}
+.user__input{
+    height: 25px;
+    width: 300px;
+    margin: 12px 0;
+}
+.user__link{
+    color: rgb(55, 55, 255);
+
+}
+.user__file-info{
+    font-size: 0.9rem;
+    color: var(--font);
+    margin-top: 18px;
+    align-self: start;
+
+}
