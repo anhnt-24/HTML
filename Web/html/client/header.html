@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Web/css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/Web/css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        
+        <div class="header__container">
+            
+            <a href="#" class="header__icon">
+                Sopi          
+            </a>
+            <div class="header__center">
+                <ul class="header__buttons">
+                    <a href="" class="header__button">Trang chủ</a>
+                    <div class="header__product-container">
+                        <a href="" class="header__button">
+                            Sản phẩm
+                        </a>
+                        <ul class="header__list-product">
+                            <a href="" class="header__list-product--item header__button" name="shirt">Áo</a>
+                            <a href="" class="header__list-product--item header__button" name="short">Quần</a>
+                            <a href="" class="header__list-product--item header__button" name="hat">Mũ</a>
+                            <a href="" class="header__list-product--item header__button" name="shoes">Giày</a>
+                            <div class="header__list-product--img">
+                                <img src="/Web/assets/Mu_shirt.png" alt="" class="header__list-product--img-item">
+                                <span class="header__product--pic">Quả cầu băng sương</span>
+                            </div>
+                        </ul>
+                    </div>
+                    <a href="" class="header__button">Liên hệ</a>
+                    <a href="" class="header__button">Về chúng tôi</a>
+                </ul>
+                <div class="header__search">
+                    <input type="text" class="header__search--input" placeholder="Tìm kiếm">
+                    <div class="button--search btn_hover">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                            <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"/>
+                            <path d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"/>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="header__right">
+                <ul class="header__buttons" style="justify-content: flex-end;">
+                    
+                        <!-- <a href="/login" class="header__button">Đăng nhập</a>
+                        <a href="/register" class="header__button"> Đăng kí </a> -->
+                    
+                        <div class="header__user-container">
+                            <span style="text-align: center;" href="" class="header__button header__user"><img style="width: 30px; border-radius: 50%; box-shadow: 0 1px 1px 1px rgb(169, 168, 168);" src="/Web/assets/defaut_user-img.png" alt=""> 
+                                <p style="margin-left: 6px; white-space: nowrap; 
+                                width: 120px; 
+                                overflow: hidden;
+                                text-overflow: ellipsis; 
+                                text-align: start;">Admin</p> 
+                            </span>
+                            <div class="header__user-list">
+                                <a class="header__user-item">Thông tin của tôi</a>
+                                <a class="header__user-item">Địa chỉ</a>
+                                <a class="header__user-item"> Đơn hàng</a>
+                                <a class="header__user-item" onclick="logout()">Đăng xuất</a>
+
+                                <form action="/logout" method="POST" id="logout"></form>
+                            </div>
+
+                        </div>
+                        <a href="" class="header__button header Cart">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 1.3rem;"></i>
+                            Giỏ hàng(2)
+                        </a>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function logout(){
+            document.getElementById('logout').submit()
+        }
+        var product={
+            shirt:{
+                url: "/Web/assets/Mu_shirt.png",
+                desc:"Áo Mu"
+            },
+            short:{
+                url: "/Web/assets/Mu_short.png",
+                desc:"Quần Mu"
+            },
+            hat:{
+                url: "/Web/assets/Vietnam_hat.png",
+                desc:"Mũ cối handmade"
+            },
+            shoes:{
+                url: "/Web/assets/shoes_header.png",
+                desc:"Giày thể thao"
+            }
+        }
+        var listHeaderProduct=document.querySelectorAll('.header__list-product--item')
+        console.log(listHeaderProduct)
+        for(let item of listHeaderProduct){
+            item.onmouseover=function(){
+                var product_img=document.querySelector(".header__list-product--img-item")
+                var product_desc=document.querySelector(".header__product--pic")
+                product_img.setAttribute("src",product[item.name].url)
+                product_desc.textContent=product[item.name].desc
+            }
+        }
+
+
+        
+
+    </script>
+</body>
+</html>
