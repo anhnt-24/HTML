@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-    background-color: #f6faf480;
+    background-color: white;
     padding: 24px;
     
 }
@@ -182,8 +182,9 @@
     padding-top: 24px;
 }
 .productdetail__footer-item{
-
+    
 }
 .productdetail__footer-item i{
     color: rgb(202, 68, 68);
 }
+

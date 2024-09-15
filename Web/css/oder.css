@@ -1,6 +1,5 @@
 #order{
     width: 100%;
-    background-color: var(--background-color);
     padding: 12px;
 }
 .order__header{

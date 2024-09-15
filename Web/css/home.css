@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #f6faf480;
+    background-color: white;
     padding: 32px;
 }
 .home__carousel{

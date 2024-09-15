@@ -4,8 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/shippingAddress.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    
+    <div class="main__container">
+        <div id="address">
+            <div class="address_group">
+                <h2 class="address__header">Địa chỉ của tôi</h2>
+                <button class="address__add-new" onclick="openAddressAddModal()" ><i class="fa-solid fa-plus"></i> Thêm địa chỉ mới</button>
+            </div>
+
+            <div class="address__container">
+                <div class="address_group address-item">
+                    <div>
+                        <p><b>Nguyễn Tuấn Anh</b> (+84) 389 801 058</p>
+                        <p>Số 58, Ngõ 73 Phùng Khoang</p>
+                        <p>Phường Trung Văn, Quận Nam Từ Liêm, Hà Nội</p>
+                    </div>
+                    <div>
+                        <div>
+                            <button class="address__btn-action">Xóa</button>
+                            <button class="address__btn-action">Cập nhật</button>
+                        </div>
+                        <button class="address__btn-setdefault">Thiết lập mặc định</button>
+                    </div>
+                </div>
+
+        
+
+        
+                <div class="address_group address-item">
+                    <div>
+                        <p><b>Nguyễn Tuấn Anh</b> (+84) 389 801 058</p>
+                        <p>Số 58, Ngõ 73 Phùng Khoang</p>
+                        <p>Phường Trung Văn, Quận Nam Từ Liêm, Hà Nội</p>
+                    </div>
+                    <div>
+                        <div>
+                            <button class="address__btn-action">Xóa</button>
+                            <button class="address__btn-action">Cập nhật</button>
+                        </div>
+                        <button class="address__btn-setdefault">Thiết lập mặc định</button>
+                    </div>
+                </div>
+
+            
+            </div>
+        </div>
+    </div>    
+<div class="address__modal">
+    <form action="" class="address__form-add">
+        <h3 class="address__form-add-header">Địa chỉ mới</h3>
+        <div>
+
+            <div class="address__form-add-group">
+                <label for="name">Họ và tên</label> <br>
+                <input class="address__form-add-input" type="text" name="name" placeholder="Họ và tên">
+            </div>
+            <div class="address__form-add-group">
+                <label for="name">Số điện thoại</label><br>
+                <input class="address__form-add-input" type="text" name="phone" placeholder="Số điện thoại">
+            </div >
+            <div class="address__form-add-group">
+                <label for="city" class="">Tỉnh/Thành Phố</label><br>
+                <select class="address__form-add-input" id="tinh" name="tinh" title="Chọn Tỉnh Thành">
+                    <option value="0" >Tỉnh Thành</option>
+                </select> 
+            </div>
+            
+            <div class="address__form-add-group">
+                <label for="district" class="">Quận/Huyện</label><br>
+                <select class="address__form-add-input"  id="quan" name="quan" title="Chọn Quận Huyện" required>
+                    <option aria-required="">Quận Huyện</option>
+                </select> 
+            </div>
+            
+            <div class="address__form-add-group">
+                <label for="ward" class="">Phường/Xã</label><br>
+                <select class="address__form-add-input"  id="phuong" name="phuong" title="Chọn Phường Xã">
+                    <option value="0">Phường Xã</option>
+                </select>
+            </div>
+            <div class="address__form-add-group">
+                <label for="">Địa chỉ cụ thể</label><br>
+                <input class="address__form-add-input" type="text" name="detailaddress" placeholder="Địa chỉ">
+            </div>
+        </div>
+        <div style="float: right;margin-top: 24px;">
+            <button class="address__form-add-btn address__form-add-cancel" type="button" onclick="closeAddressAddModal()">Hủy bỏ</button>
+            <input class="address__form-add-btn" type="submit" value="Hoàn thành">
+        </div>
+    </form>
+</div>
 </body>
+
+<script src="https://esgoo.net/scripts/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+        //Lấy tỉnh thành
+        $.getJSON('https://esgoo.net/api-tinhthanh/1/0.htm',function(data_tinh){	       
+            if(data_tinh.error==0){
+               $.each(data_tinh.data, function (key_tinh,val_tinh) {
+                  $("#tinh").append('<option value="'+val_tinh.id+'">'+val_tinh.full_name+'</option>');
+               });
+               $("#tinh").change(function(e){
+                    var idtinh=$(this).val();
+                    //Lấy quận huyện
+                    $.getJSON('https://esgoo.net/api-tinhthanh/2/'+idtinh+'.htm',function(data_quan){	       
+                        if(data_quan.error==0){
+                           $("#quan").html('<option value="0">Quận Huyện</option>');  
+                           $("#phuong").html('<option value="0">Phường Xã</option>');   
+                           $.each(data_quan.data, function (key_quan,val_quan) {
+                              $("#quan").append('<option value="'+val_quan.id+'">'+val_quan.full_name+'</option>');
+                           });
+                           //Lấy phường xã  
+                           $("#quan").change(function(e){
+                                var idquan=$(this).val();
+                                $.getJSON('https://esgoo.net/api-tinhthanh/3/'+idquan+'.htm',function(data_phuong){	       
+                                    if(data_phuong.error==0){
+                                       $("#phuong").html('<option value="0">Phường Xã</option>');   
+                                       $.each(data_phuong.data, function (key_phuong,val_phuong) {
+                                          $("#phuong").append('<option value="'+val_phuong.id+'">'+val_phuong.full_name+'</option>');
+                                       });
+                                    }
+                                });
+                           });
+                            
+                        }
+                    });
+               });   
+                
+            }
+        });
+     });
+     
+     function openAddressAddModal(){
+        $('.address__modal').css('display','flex')
+     }
+     function closeAddressAddModal(){
+        $('.address__modal').css('display','none')
+     }
+   
+ </script>
 </html>

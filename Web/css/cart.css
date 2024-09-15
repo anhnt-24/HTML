@@ -1,6 +1,5 @@
 #cart{
     width: 100%;
-    background-color: var(--background-color);
     padding: 12px;
 
 }
@@ -99,7 +98,7 @@
 }
 .cart__to-order-submit{
     color: black;
-    background-color: rgba(108, 221, 21, 0.775);
+    background-color: rgb(189, 214, 227);
     padding: 6px 20px;
     font-size: 1.2rem;
     border-radius: 2px;

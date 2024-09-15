@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
@@ -12,69 +13,42 @@
         <div id="payment">
             <form class="payment__form">
                     <!-- //Address -->
-                <h2 class="payment__header">Địa Chỉ Giao Hàng</h2>
-                <div class="payment__form-address">
-
-                    <div class="payment__form-group">
-                        <label for="name" class="payment__label">Họ Tên *</label><br>
-                        <input type="text" id="name" name="name" class="payment__input" placeholder="Nhập họ tên của bạn" required><br><br>
+                    <div class="payment__form-address-border"></div>
+                    <div class="payment__form-address">
+                        <h2 class="payment__header">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Địa Chỉ Nhận Hàng 
+                        </h2>
+                        <div class="payment__form-address-group">
+                            <span>
+                                <strong style="margin-right: 12px;">Nguyễn Tuấn Anh (0389801058) </strong>
+                                Danh Thắng, Hiệp Hòa, Bắc Giang
+                            </span> 
+                            <button class="payment__form-address-button"> Thay đổi</button>
+                        </div>
                     </div>
-                    
-                    <div class="payment__form-group">
-                        <label for="email" class="payment__label">Email *</label><br>
-                        <input type="email" id="email" name="email" class="payment__input" placeholder="Nhập email của bạn" required><br><br>
-                    </div>
-                    
-                    <div class="payment__form-group">
-                        <label for="phone" class="payment__label">SĐT *</label><br>
-                        <input type="tel" id="phone" name="phone" class="payment__input" placeholder="Nhập số điện thoại" required><br><br>
-                    </div>
-                    
-                    <div class="payment__form-group">
-                        <label for="city" class="payment__label">Tỉnh/Thành Phố *</label><br>
-                        <select class="payment__select" id="tinh" name="tinh" title="Chọn Tỉnh Thành">
-                            <option value="0" >Tỉnh Thành</option>
-                        </select> 
-                    </div>
-                    
-                    <div class="payment__form-group">
-                        <label for="district" class="payment__label">Quận/Huyện *</label><br>
-                        <select class="payment__select"  id="quan" name="quan" title="Chọn Quận Huyện" required>
-                            <option aria-required="">Quận Huyện</option>
-                        </select> 
-                    </div>
-                    
-                    <div class="payment__form-group">
-                        <label for="ward" class="payment__label">Phường/Xã *</label><br>
-                        <select class="payment__select"  id="phuong" name="phuong" title="Chọn Phường Xã">
-                            <option value="0">Phường Xã</option>
-                        </select>
-                        
-                    </div>
-                    
-                    <div class="payment__form-group">
-                        <label for="address" class="payment__label">Địa Chỉ *</label><br>
-                        <input type="text" id="address" name="address" class="payment__input" placeholder="Nhập địa chỉ" required><br><br>
-                    </div>
-                </div>
 
                 <!-- //Address -->
 
                 <!-- OrderStatus -->
+            <div class="payment__form-container">
+
                 <h2 class="payment__header">Đơn Hàng</h2>
                 <div class="payment__form-order">
-
                     <div class="payment__order-summary">
-                        <img src="/assets/ptit_logo.png" alt="Product Image" class="payment__image"><br>
-                        <div> 
-                            <p class="payment__product-info">
-                            <strong>Sản phẩm: </strong> Áo sơ mi (sale 90%)<br>
-                            <strong>Màu: </strong> Đen<br>
-                            <strong>Kích cỡ: </strong>M<br>
-                            <strong>Đơn giá: </strong> 99.000đ<br>
+                        <div style="display:flex;">
+                            <img src="/assets/ptit_logo.png" alt="Product Image" class="payment__image" style="margin-right: 48px;"><br>
+                            <div> 
+                                <p class="payment__product-info">
+                                <strong>Sản phẩm: </strong> Áo sơ mi (sale 90%)<br>
+                                <strong>Màu: </strong> Đen<br>
+                                <strong>Kích cỡ: </strong>M<br>
+                                <strong>Đơn giá: </strong> 99.000đ<br>
+                                
+                                <strong>Số lượng:</strong> 10</p>
+    
+                            </div>
                             
-                            <strong>Số lượng:</strong> 10</p>
-
                         </div>
                         <div class="payment__price-container">
                             <p class="payment__price">99.000đ</p>
@@ -82,15 +56,18 @@
                         </div>
                     </div>
                     <div class="payment__order-summary">
-                        <img src="/assets/ptit_logo.png" alt="Product Image" class="payment__image"><br>
-                        <div> 
-                            <p class="payment__product-info">
-                            <strong>Sản phẩm: </strong> Áo sơ mi (sale 90%)<br>
-                            <strong>Màu: </strong> Đen<br>
-                            <strong>Kích cỡ: </strong>M<br>
-                            <strong>Đơn giá: </strong> 99.000đ<br>
-                            <strong>Số lượng:</strong> 10</p>
-
+                        <div style="display:flex;">
+                            <img src="/assets/ptit_logo.png" alt="Product Image" class="payment__image" style="margin-right: 48px;"><br>
+                            <div> 
+                                <p class="payment__product-info">
+                                <strong>Sản phẩm: </strong> Áo sơ mi (sale 90%)<br>
+                                <strong>Màu: </strong> Đen<br>
+                                <strong>Kích cỡ: </strong>M<br>
+                                <strong>Đơn giá: </strong> 99.000đ<br>
+                                
+                                <strong>Số lượng:</strong> 10</p>
+    
+                            </div>
                         </div>
                         <div class="payment__price-container">
                             <p class="payment__price">99.000đ</p>
@@ -118,11 +95,12 @@
                     </div>
                     <h3 class="payment__total">Tổng thanh toán: 0đ</h3>
                     <input style="display: none;" type="text" name="total" value="0" >
-                
                 </div>
+            </div>
                 <!-- ///OrderStatus -->
-
                 <!-- Payment Method -->
+            <div class="payment__form-container">
+                
                 <h2 class="payment__header">Phương Thức Thanh Toán</h2>
                  <div class="payment__form-method">
                     <div class="payment__form-method-container">
@@ -143,9 +121,9 @@
                             <label for="cod" class="payment__label">Thanh toán khi nhận hàng (COD)</label><br><br>
                         </div>
                     </div>
-                     
                      <button type="submit" class="payment__button">Xác Nhận</button>
                  </div>
+            </div>
                 <!-- Payment Method -->
 
             </form>
@@ -166,63 +144,5 @@
         <input name="payment_method"  >
     </form>
 </body>
-<script src="https://esgoo.net/scripts/jquery.js"></script>
-<script>
-    $(document).ready(function() {
-        //Lấy tỉnh thành
-        $.getJSON('https://esgoo.net/api-tinhthanh/1/0.htm',function(data_tinh){	       
-            if(data_tinh.error==0){
-               $.each(data_tinh.data, function (key_tinh,val_tinh) {
-                  $("#tinh").append('<option value="'+val_tinh.id+'">'+val_tinh.full_name+'</option>');
-               });
-               $("#tinh").change(function(e){
-                    var idtinh=$(this).val();
-                    //Lấy quận huyện
-                    $.getJSON('https://esgoo.net/api-tinhthanh/2/'+idtinh+'.htm',function(data_quan){	       
-                        if(data_quan.error==0){
-                           $("#quan").html('<option value="0">Quận Huyện</option>');  
-                           $("#phuong").html('<option value="0">Phường Xã</option>');   
-                           $.each(data_quan.data, function (key_quan,val_quan) {
-                              $("#quan").append('<option value="'+val_quan.id+'">'+val_quan.full_name+'</option>');
-                           });
-                           //Lấy phường xã  
-                           $("#quan").change(function(e){
-                                var idquan=$(this).val();
-                                $.getJSON('https://esgoo.net/api-tinhthanh/3/'+idquan+'.htm',function(data_phuong){	       
-                                    if(data_phuong.error==0){
-                                       $("#phuong").html('<option value="0">Phường Xã</option>');   
-                                       $.each(data_phuong.data, function (key_phuong,val_phuong) {
-                                          $("#phuong").append('<option value="'+val_phuong.id+'">'+val_phuong.full_name+'</option>');
-                                       });
-                                    }
-                                });
-                           });
-                            
-                        }
-                    });
-               });   
-                
-            }
-        });
-     });	
-    
-     $('.payment__button-discount').click(function(){
-        if($('#discount_code').val()){
-            var a=$('.payment__form').find(':input[name]')
-            $.each(a,function(i,v){
-                if(v.type=='radio' ){
-                    if(v.checked===true){
-                        $('.payment__discount').children(`input[name=${v.name}]`).attr('value',v.value)
-                    }
-                }
 
-                else{
-                    $('.payment__discount').children(`input[name=${v.name}]`).attr('value',v.value)
-                }
-            })
-            $('.payment__discount').submit()
-        }
-     })
-     
- </script>
 </html>
