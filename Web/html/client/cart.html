@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/cart.css">
 </head>
@@ -11,7 +12,7 @@
     <div class="main__container">
         <div id="cart">
             <h2 class="cart__title"> Giỏ hàng của tôi</h2>
-           <div class="cart__container">
+           <form class="cart__container">
                 <div class="cart__header">
                     <h4 class="cart__item-name">Sản phẩm</h4>
                     <h4 class="cart__item-category">Phân loại</h4>
@@ -22,10 +23,13 @@
                 </div>
                 <div class="cart__item">
                     <div class="cart__item-group cart__item-name">
-                        <input type="checkbox" style="margin-right: 12px;" class="cart__checkbox">
+                        <input type="checkbox" style="margin-right: 12px;" class="cart__checkbox" name="cartItem[]" value="0">
                         <img src="/assets/Mu_shirt.png" alt="" height="100" style="margin-right: 12px;">
-                        <p>Áo thi đấu Mu <br> 
-                            <small style="color: red;">Miễn phí đổi trả trong 15 ngày</small>
+                        <p>
+                            <span class="cart__item-titlte">
+                            Áo thi đấu Mu jfkjakdjfjasdkfjaksdjfkadsjfkasjdfksdjfjsdfkjkdjfkdj fjkdsjfkjas dfjkasjdfkas djfksdajfkasdjfkasfjasdjkf
+                            </span> 
+                            <span style="color: #5ADAC8; border: 1px solid #5ADAC8; padding: 2px; font-size: 0.8rem;">Miễn phí đổi trả trong 15 ngày</span>
                         </p>
                         
                     </div>
@@ -33,27 +37,31 @@
                         <p>Màu: Đỏ <br> Size: M</p>
                     </div>
                     <div class="cart__item-group cart__item-price">
-                        <del style="margin-right: 12px;"> <small>
+                        <del style="margin-right: 12px; font-size: 1rem;"> 
                             300.000đ
-                            </small>
+                            
                         </del>
-                        <span style="color: red;"> 99.000đ</span>
+                        <span style="color: red; font-size: 1.2rem;font-weight: 500;"> 99.000đ</span>
                     </div>
                     <div class="cart__item-group cart__item-quantity">
-                        <button class="cart__item-quantity-minus">-</button>
-                        <input type="text" name="" class="cart__item-quantity-input" value="1" >
-                        <button class="cart__item-quantity-plus">+</button>
+                        <button class="cart__item-quantity-minus" type="button">-</button>
+                        <input type="text" name="" class="cart__item-quantity-input" value="1"  >
+                        <button class="cart__item-quantity-plus" type="button">+</button>
                     </div>
                     <p class="cart__item-total">99.000đ</p>
-                    <a class="cart__item-group cart__item-action">Xóa</a>
+                    <a href="#" class="cart__item-group cart__item-action" style="font-size: 1.2rem; color: var(--link-color);">Xóa</a>
 
                 </div>
+                <!--  -->
                 <div class="cart__item">
                     <div class="cart__item-group cart__item-name">
-                        <input type="checkbox" style="margin-right: 12px;" class="cart__checkbox">
+                        <input type="checkbox" style="margin-right: 12px;" class="cart__checkbox" name="cartItem[]" value="0">
                         <img src="/assets/Mu_shirt.png" alt="" height="100" style="margin-right: 12px;">
-                        <p>Áo thi đấu Mu <br> 
-                            <small style="color: red;">Miễn phí đổi trả trong 15 ngày</small>
+                        <p>
+                            <span class="cart__item-titlte">
+                            Áo thi đấu Mu jfkjakdjfjasdkfjaksdjfkadsjfkasjdfksdjfjsdfkjkdjfkdj fjkdsjfkjas dfjkasjdfkas djfksdajfkasdjfkasfjasdjkf
+                            </span> 
+                            <span style="color: #5ADAC8; border: 1px solid #5ADAC8; padding: 2px; font-size: 0.8rem;">Miễn phí đổi trả trong 15 ngày</span>
                         </p>
                         
                     </div>
@@ -61,29 +69,31 @@
                         <p>Màu: Đỏ <br> Size: M</p>
                     </div>
                     <div class="cart__item-group cart__item-price">
-                        <del style="margin-right: 12px;"> <small>
+                        <del style="margin-right: 12px; font-size: 1rem;"> 
                             300.000đ
-                            </small>
+                            
                         </del>
-                        <span style="color: red;"> 99.000đ</span>
+                        <span style="color: red; font-size: 1.2rem;font-weight: 500;"> 99.000đ</span>
                     </div>
                     <div class="cart__item-group cart__item-quantity">
-                        <button class="cart__item-quantity-minus">-</button>
-                        <input type="text" name="" class="cart__item-quantity-input" value="1" >
-                        <button class="cart__item-quantity-plus">+</button>
+                        <button class="cart__item-quantity-minus" type="button">-</button>
+                        <input type="text" name="" class="cart__item-quantity-input" value="1"  >
+                        <button class="cart__item-quantity-plus" type="button">+</button>
                     </div>
                     <p class="cart__item-total">99.000đ</p>
-                    <a class="cart__item-group cart__item-action">Xóa</a>
+                    <a href="#" class="cart__item-group cart__item-action" style="font-size: 1.2rem; color: var(--link-color);">Xóa</a>
 
                 </div>
+                <!--  -->
                 <div class="cart__item">
                     <div class="cart__item-group cart__item-name">
-                        <input type="checkbox" style="margin-right: 12px;" class="cart__checkbox">
+                        <input type="checkbox" style="margin-right: 12px;" class="cart__checkbox" name="cartItem[]" value="0">
                         <img src="/assets/Mu_shirt.png" alt="" height="100" style="margin-right: 12px;">
-                        <p><strong style="line-height: 1.6rem;">
-                            Áo thi đấu Mu
-                        </strong>  <br> 
-                            <small style="color: #5ADAC8; border: 1px solid #5ADAC8; padding: 2px;">Miễn phí đổi trả trong 15 ngày</small>
+                        <p>
+                            <span class="cart__item-titlte">
+                            Áo thi đấu Mu jfkjakdjfjasdkfjaksdjfkadsjfkasjdfksdjfjsdfkjkdjfkdj fjkdsjfkjas dfjkasjdfkas djfksdajfkasdjfkasfjasdjkf
+                            </span> 
+                            <span style="color: #5ADAC8; border: 1px solid #5ADAC8; padding: 2px; font-size: 0.8rem;">Miễn phí đổi trả trong 15 ngày</span>
                         </p>
                         
                     </div>
@@ -91,38 +101,45 @@
                         <p>Màu: Đỏ <br> Size: M</p>
                     </div>
                     <div class="cart__item-group cart__item-price">
-                        <del style="margin-right: 12px;"> <small>
+                        <del style="margin-right: 12px; font-size: 1rem;"> 
                             300.000đ
-                            </small>
+                            
                         </del>
-                        <span style="color: red;"> 99.000đ</span>
+                        <span style="color: red; font-size: 1.2rem;font-weight: 500;"> 99.000đ</span>
                     </div>
                     <div class="cart__item-group cart__item-quantity">
                         <button class="cart__item-quantity-minus">-</button>
-                        <input type="text" name="" class="cart__item-quantity-input" value="1" >
+                        <input type="text" name="" class="cart__item-quantity-input" value="1"  >
                         <button class="cart__item-quantity-plus">+</button>
                     </div>
                     <p class="cart__item-total">99.000đ</p>
-                    <a href="#" class="cart__item-group cart__item-action" style="color: blue;">Xóa</a>
+
+                    <a href="" class="cart__item-group cart__item-action" style="font-size: 1.2rem; color: var(--link-color);">Xóa</a>
 
                 </div>
+                <!--  -->
                 <div class="cart__to-order">
                     <div class="cart__to-order-group">
-                        <input type="checkbox" class="cart__checkall">
+                        <input type="checkbox" class="cart__checkall" style="transform: scale(1.2);">
                         <label for="">Chọn tất cả</label>
+                        <button data-link="link" type="submit" style="margin-left: 32px;" class="link_hover cart__delete-options">Xóa</button>
                     </div>
                     <div class="cart__to-order-group">
                         <label for="">Tổng thanh toán:</label>
-                        <strong style="color: red; margin-right: 100px"> 0đ</strong>
-                        <button type="button" class="cart__to-order-submit btn_hover"> Mua Hàng</button>
+                        <strong style="color: red; margin-right: 100px; font-size: 1.4rem; font-weight: 600;"> 300.000đ</strong>
+                        <button type="submit" class="cart__to-order-submit btn_hover"> Mua Hàng</button>
+
                     </div>
                 </div>
-           </div>
+           </form>
         </div>
     </div>
+    
 </body>
 <script src="https://esgoo.net/scripts/jquery.js"></script>
+<script src="/js/modal-info.js"></script>
 <script>
+    
     var checkbox=$('.cart__checkbox')
     $('.cart__checkall').change(function(){
         var _this=this
@@ -142,6 +159,14 @@
     $.each(quantity,function(i,x){
         let minus=x.querySelector('.cart__item-quantity-minus')
         let plus=x.querySelector('.cart__item-quantity-plus')
+        let quantity=x.querySelector('.cart__item-quantity-input')
+        if(quantity)
+            quantity.onblur=function(){
+                if(!this.value || this.value<1){
+                    this.value=1
+                }
+            }
+
         if(minus){
                 minus.onclick=function(){
                 let input=x.querySelector('.cart__item-quantity-input')
@@ -158,7 +183,18 @@
         }
         
     })
-
+    function cartSubmitChoices(e){
+       if( $('.cart__checkbox:checked').length===0){
+            renderInforModal('Chưa có sản phẩm nào được chọn.',false,'')
+            e.preventDefault()        
+       }else{
+            $('.cart__container').attr('action',e.target.getAttribute('data-link'))
+       }
+    }
+    $('.cart__to-order-submit').click(cartSubmitChoices)
+    $('.cart__delete-options').click(cartSubmitChoices)
 
 </script>
+
+
 </html>

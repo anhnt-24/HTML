@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -42,11 +40,8 @@
                 </ul>
                 <div class="header__search">
                     <input type="text" class="header__search--input" placeholder="Tìm kiếm">
-                    <div class="button--search btn_hover">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
-                            <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"/>
-                            <path d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"/>
-                          </svg>
+                    <div class="button__search btn_hover">
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
             </div>
@@ -57,7 +52,12 @@
                         <a href="/register" class="header__button"> Đăng kí </a> -->
                     
                         <div class="header__user-container">
-                            <span style="text-align: center;" href="" class="header__button header__user"><img style="width: 30px; border-radius: 50%; box-shadow: 0 1px 1px 1px rgb(169, 168, 168);" src="/assets/defaut_user-img.png" alt=""> 
+                            <span style="text-align: center;" href="" class="header__button header__user">
+                                <img style="width: 30px; 
+                                            height: 30px; 
+                                            object-fit:contain; 
+                                            border-radius: 50%; 
+                                            border: 1px solid gray;" src="/assets/defaut_user-img.png" alt=""> 
                                 <p style="margin-left: 6px; white-space: nowrap; 
                                 width: 120px; 
                                 overflow: hidden;
@@ -65,9 +65,9 @@
                                 text-align: start;">Admin</p> 
                             </span>
                             <div class="header__user-list">
-                                <a class="header__user-item">Thông tin của tôi</a>
-                                <a class="header__user-item">Địa chỉ</a>
-                                <a class="header__user-item"> Đơn hàng</a>
+                                <a class="header__user-item"><i class="fa-solid fa-user"></i> Tài khoản</a>
+                                <a class="header__user-item"><i class="fa-solid fa-location-dot"></i> Địa chỉ</a>
+                                <a class="header__user-item"> <i class="fa-solid fa-box"></i> Đơn hàng</a>
                                 <a class="header__user-item" onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất </a>
 
                                 <form action="/logout" method="POST" id="logout"></form>

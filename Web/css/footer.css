@@ -1,33 +1,30 @@
 /* Footer */
-
- 
-
 #footer{
     width: 100%;
-    display:  flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
     border-top: 4px solid var(--primary);
-    margin: 0;
     background-color: var(--bg-color);
-    
-}
+}   
 
 .footer__container{
-    color: var(--footer-color);
-    width: 80%;
-    margin: 32px 0;
+
+    color: var(--font-1);
+    width: 90%;
+    margin: 34px 0;
+    margin-left: 150px;
+
+}
+.footer__container-item{
+    padding: 0 24px;
 
 }
 .footer__title{
-    font-size: 1.3rem;
-    color: var(--footer-color);
+    font-size: 1.4rem;
+    color: var(--font-1);
     margin-bottom: 12px;
 }
 .footer__list{
     line-height: 1.65rem;
-    
+    font-size: 1.1rem;
 }
 
 .footer__payment{
@@ -47,7 +44,7 @@
 .footer__cooperator{
     width: 150px;
 }
-.footer_policy_hover:hover{
+.footer__list-hover:hover{
     color: var(--primary);
     cursor: pointer;
     text-decoration: underline;

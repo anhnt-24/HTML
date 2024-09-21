@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/login.css">
     <title>Document</title>
@@ -11,34 +12,57 @@
 
 <body>
     <div class="main__container">
-        <div id="login" class="login-signup__active">
-            <a href="/register" class="login_signup-btn btn_hover">
-                Đăng kí
-            </a>
-            <form  method="" class="login__form">
-                <h2 class="login__title" >Đăng nhập</h2>
-                <input name="username" class="login__input" type="text" placeholder="Tên đăng nhập" required>
-                <input name="password" class="login__input" type="password" placeholder="Mật khẩu" required>
-        
-                <div class="login__btn-container">
-                    <a href="#">Quên mật khẩu?</a>
-                    <input class="login__btn btn_hover" type="submit" value="Đăng nhập">
-                </div>
-            </form>
-            <button class="login__fb btn_hover">
-                <img src="/assets/facebook_logo.png" alt="">
-                Đăng nhập bằng Facebook</button>
-            <button back class="login__google btn_hover">
-                <img src="/assets/google_logo.png" alt="">
-                Đăng nhập bằng Google
-            </button>
-        </div>
+
+       <div style="display: flex; align-items: center; flex-direction: column;">
+            <p class="error">Tài khoản hoặc mật khẩu sai, vui lòng nhập lại!</p>
+
+           <div id="login" class="login-register__active">
+               <a href="/register" class="login_register-btn link_hover">
+                   Đăng kí
+               </a>
+               <form  id="login__form" class="login__form">
+                   <h2 class="login__title" >Đăng nhập</h2>
+                   <div class="login__input-group">
+                        <label for="username">Tên đăng nhập:</label><br>
+                        <input name="username" class="login__input" type="text" id="username" placeholder="Tên đăng nhập" required>
+                    </div>
+                
+                    <div class="login__input-group">
+                        <label for="password">Mật khẩu:</label><br>
+                        <input name="password" class="login__input" type="password" id="password" placeholder="Mật khẩu" required>
+                    </div>
+                   <div class="login__btn-container">
+                       <a class="link_hover"  style="color: var(--link-color);" href="#">Quên mật khẩu?</a>
+                       <input class="login__btn btn_hover" type="submit" value="Đăng nhập">
+                   </div>
+               </form>
+               <button class="login__fb btn_hover">
+                   <img src="/assets/facebook_logo.png" alt="">
+                   Đăng nhập bằng Facebook</button>
+               <button back class="login__google btn_hover">
+                   <img src="/assets/google_logo.png" alt="">
+                   Đăng nhập bằng Google
+               </button>
+           </div>
+
+       </div>
 
 
     </div>
-    <script>
+<script src="/js/validate.js"></script>
 
-    </script>
+<script>
+    Validator({
+        form:'#login__form',
+        rules:[
+            Validator.isRequired('#username'),
+            Validator.isUsername('#username'),
+            Validator.isRequired('#password'),
+        ]
+
+    })
+    
+</script>
 </body>
 
 </html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/home.css">
@@ -24,19 +25,23 @@
                     </div> 
                 </div>
                 <div class="home__carousel-change">
-                    <svg class="home__carousel-change-left" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
-                        <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"/>
-                    </svg>
-                    <svg class="home__carousel-change-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-                        <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
-                    </svg>
+                    <p class="home__carousel-change-left">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </p>
+                    <p class="home__carousel-change-right" >
+                        <i class="fa-solid fa-angle-right"></i>
+                    </p>
+                   
                 </div>
-                <div class="home__carousel-status noselect">
-                    <i class="fa-solid fa-circle"></i>
-                    <i class="fa-regular fa-circle"></i>
-                    <i class="fa-regular fa-circle"></i>
-                    <i class="fa-regular fa-circle"></i>
-                    <i class="fa-regular fa-circle"></i>
+                <div class="home__carousel-status">
+                    <i class="fa-solid fa-circle home__carousel-status-item"></i>
+                    <i class="fa-regular fa-circle home__carousel-status-item"></i>
+                    <i class="fa-regular fa-circle home__carousel-status-item"></i>
+                    <i class="fa-regular fa-circle home__carousel-status-item"></i>
+                    <i class="fa-regular fa-circle home__carousel-status-item"></i>
+                    <i class="fa-regular fa-circle home__carousel-status-item"></i>
+                    <i class="fa-regular fa-circle home__carousel-status-item"></i>
+                    <i class="fa-regular fa-circle home__carousel-status-item"></i>
                 </div>
                 
             </div>
@@ -57,12 +62,70 @@
                     <div class="home__product-container-2" >
                         <div class="home__products">
                             <div class="home__product-item collumn-4" href="#">
+                                <span class="home__product-item-tag"><i class="fa-solid fa-check"></i> Yêu thích</span>
+                                <span class="home__product-item-tag-before"></span>
                                 <a href="">
                                     <img class="home_product-pic" src="https://via.placeholder.com/300x400" alt="Product Image">
                                 </a>
-                                <h4>Sơ mi đen vc</h4>
-                                <p style="color: red; font-size: 1.3rem;"> <del style="color: black; font-size: 1rem;">300.000đ</del>  99.000đ</p>
-                                <a href="" class="home__product-item-detail">Xem chi tiết</a>    
+                                <p class="home_product-header">Sơ mi đen vc nguyen tuan anh dfha hf ha dh fh asdhfhadfhdhfhdsfadfadsfas</p>
+                                <span class="home__product-item-ext"><i class="fa-solid fa-truck-fast"></i> Free ship extra</span>
+                                <div class="home__product-item-group">
+                                    <p class="home__product-item-cost"> <del style="color: black; font-size: 1rem;">300.000đ</del>  99.000đ</p>
+                                    <p style="font-size: 0.9rem;" >Đã bán 52,7k</p>
+                                </div>
+                                
+                                <a href="" class="home__product-item-detail btn_hover"><i class="fa-solid fa-circle-info"></i> Xem chi tiết</a>    
+                                
+                            </div>
+                            <!-- product-item -->
+                            <div class="home__product-item collumn-4" href="#">
+                                <span class="home__product-item-tag"><i class="fa-solid fa-check"></i> Yêu thích</span>
+                                <span class="home__product-item-tag-before"></span>
+                                <a href="">
+                                    <img class="home_product-pic" src="https://via.placeholder.com/300x400" alt="Product Image">
+                                </a>
+                                <p class="home_product-header">Sơ mi đen vc nguyen tuan anh dfha hf ha dh fh asdhfhadfhdhfhdsfadfadsfas</p>
+                                <span class="home__product-item-ext"><i class="fa-solid fa-truck-fast"></i> Free ship extra</span>
+                                <div class="home__product-item-group">
+                                    <p class="home__product-item-cost"> <del style="color: black; font-size: 1rem;">300.000đ</del>  99.000đ</p>
+                                    <p style="font-size: 0.9rem;" >Đã bán 52,7k</p>
+                                </div>
+                                
+                                <a href="" class="home__product-item-detail btn_hover"><i class="fa-solid fa-circle-info"></i> Xem chi tiết</a>    
+                                
+                            </div>
+                            <!--  -->
+                            <div class="home__product-item collumn-4" href="#">
+                                <span class="home__product-item-tag"><i class="fa-solid fa-check"></i> Yêu thích</span>
+                                <span class="home__product-item-tag-before"></span>
+                                <a href="">
+                                    <img class="home_product-pic" src="https://via.placeholder.com/300x400" alt="Product Image">
+                                </a>
+                                <p class="home_product-header">Sơ mi đen vc nguyen tuan anh dfha hf ha dh fh asdhfhadfhdhfhdsfadfadsfas</p>
+                                <span class="home__product-item-ext"><i class="fa-solid fa-truck-fast"></i> Free ship extra</span>
+                                <div class="home__product-item-group">
+                                    <p class="home__product-item-cost"> <del style="color: black; font-size: 1rem;">300.000đ</del>  99.000đ</p>
+                                    <p style="font-size: 0.9rem;" >Đã bán 52,7k</p>
+                                </div>
+                                
+                                <a href="" class="home__product-item-detail btn_hover"><i class="fa-solid fa-circle-info"></i> Xem chi tiết</a>    
+                                
+                            </div>
+                            <!--  -->
+                            <div class="home__product-item collumn-4" href="#">
+                                <span class="home__product-item-tag"><i class="fa-solid fa-check"></i> Yêu thích</span>
+                                <span class="home__product-item-tag-before"></span>
+                                <a href="">
+                                    <img class="home_product-pic" src="https://via.placeholder.com/300x400" alt="Product Image">
+                                </a>
+                                <p class="home_product-header">Sơ mi đen vc nguyen tuan anh dfha hf ha dh fh asdhfhadfhdhfhdsfadfadsfas</p>
+                                <span class="home__product-item-ext"><i class="fa-solid fa-truck-fast"></i> Free ship extra</span>
+                                <div class="home__product-item-group">
+                                    <p class="home__product-item-cost"> <del style="color: black; font-size: 1rem;">300.000đ</del>  99.000đ</p>
+                                    <p style="font-size: 0.9rem;" >Đã bán 52,7k</p>
+                                </div>
+                                
+                                <a href="" class="home__product-item-detail btn_hover"><i class="fa-solid fa-circle-info"></i> Xem chi tiết</a>    
                                 
                             </div>
                             <div class="home__product-item collumn-4" href="#">
@@ -70,8 +133,8 @@
                                     <img class="home_product-pic" src="https://via.placeholder.com/300x400" alt="Product Image">
                                 </a>
                                 <h4>Sơ mi đen vc</h4>
-                                <p style="color: red; font-size: 1.3rem;"> <del style="color: black; font-size: 1rem;">300.000đ</del>  99.000đ</p>
-                                <a href="" class="home__product-item-detail">Xem chi tiết</a>    
+                                <p class="home__product-item-cost"> <del style="color: black; font-size: 1rem;">300.000đ</del>  99.000đ</p>
+                                <a href="" class="home__product-item-detail btn_hover">Xem chi tiết</a>    
                                 
                             </div>
                             <div class="home__product-item collumn-4" href="#">
@@ -400,10 +463,10 @@
             <div class="home__about-product">
                 <h2>Đăng kí nhận thông tin thêm về sản phẩm</h2>
                 <form class="home__about-product-form" action="#" method="post">
-                    <label for="name">Họ và tên</label><br>
+                    <label for="name">Họ và tên:</label><br>
                     <input class="home_about-input" type="text" id="name" name="name" placeholder="Họ và tên"><br><br>
                     
-                    <label for="email">Email hoặc số điện thoại</label><br>
+                    <label for="email">Email hoặc số điện thoại:</label><br>
                     <input class="home_about-input" type="text" id="email" name="email" placeholder="Email hoặc số điện thoại"><br><br>
                     
                     <input  class="home_about-btn" type="submit" value="Gửi" >
@@ -413,79 +476,91 @@
     </div>
 
     <script>
-        $=document.querySelector.bind(document)
-        $$=document.querySelectorAll.bind(document)
-        var carousel_status=$$(".fa-circle")
-        var carousel_left=$(".home__carousel-change-left")
-        var carousel_right=$(".home__carousel-change-right")
-        var carousel_imgs= $(".home__carousel-imgs")
-        var home__product_containers=$$(".home__product-container")
-        
-        for(let home__product_container of home__product_containers){
-            let titleselect=home__product_container.querySelectorAll(".home__product-list-title")
-            for(let title of titleselect){
-                title.onclick=function(){
-                    var i=Array.prototype.indexOf.call(titleselect,this)
-                    var titleActiveBar=home__product_container.querySelector(".home__product-list-title-active")
-                    var titleActive=home__product_container.querySelector(".title-active")
-                    var home__products=home__product_container.querySelector(".home__product-container-2")
-                    home__products.style.left=-i*1350+'px'
-                    titleActive.classList.remove("title-active")
-                    this.classList.add("title-active")
-                    titleActiveBar.style.left=title.offsetLeft+'px'
-                    titleActiveBar.style.width=title.offsetWidth+'px'
-            }
-        }
-        }
-        
-        var idx
-        idx=0
-        carousel_left.onclick=function(){
-            var truoc=idx
-            idx-=1
-            if(idx<0){
-                idx=4
-            }
-            var current_status=$(".fa-solid")
-            current_status.classList.remove("fa-solid")
-            current_status.classList.add("fa-regular")
-            carousel_status[idx].classList.remove("fa-regular")
-            carousel_status[idx].classList.add("fa-solid")
-            carousel_imgs.style.left=-idx*1200+"px"
-            clearInterval(b)
-            b=setInterval(a,3000)
+        window.addEventListener('load',e =>{
 
-        }
-        carousel_right.onclick=function(){
-            var truoc=idx
-            idx+=1
-            if(idx>4){
-                idx=0
+            $=document.querySelector.bind(document)
+            $$=document.querySelectorAll.bind(document)
+            var carousel_status=$$(".home__carousel-status-item")
+            var carousel_status_length=carousel_status.length-1
+            var carousel_left=$(".home__carousel-change-left")
+            var carousel_right=$(".home__carousel-change-right")
+            var carousel_imgs= $(".home__carousel-imgs")
+            var home__product_containers=$$(".home__product-container")
+            var home__carousel_status=$('.home__carousel-status')
+            for(let home__product_container of home__product_containers){
+                let titleselect=home__product_container.querySelectorAll(".home__product-list-title")
+                title=titleselect[0]
+                var titleActiveBar=home__product_container.querySelector(".home__product-list-title-active")
+                titleActiveBar.style.left=title.offsetLeft+'px'
+                titleActiveBar.style.width=title.offsetWidth+'px'
             }
-            var current_status=$(".fa-solid")
-            current_status.classList.remove("fa-solid")
-            current_status.classList.add("fa-regular")
-            carousel_status[idx].classList.remove("fa-regular")
-            carousel_status[idx].classList.add("fa-solid")
-            carousel_imgs.style.left=-idx*1200+"px"
-            clearInterval(b)
-            b=setInterval(a,3000)
+    
+            for(let home__product_container of home__product_containers){
+                let titleselect=home__product_container.querySelectorAll(".home__product-list-title")
+                for(let title of titleselect){
+                    title.onclick=function(){
+                        var i=Array.prototype.indexOf.call(titleselect,this)
+                        var titleActiveBar=home__product_container.querySelector(".home__product-list-title-active")
+                        var titleActive=home__product_container.querySelector(".title-active")
+                        var home__products=home__product_container.querySelector(".home__product-container-2")
+                        home__products.style.left=-i*1350+'px'
+                        titleActive.classList.remove("title-active")
+                        this.classList.add("title-active")
+                        titleActiveBar.style.left=title.offsetLeft+'px'
+                        titleActiveBar.style.width=title.offsetWidth+'px'
+                }
+            }
+            }
             
-        }
-        var a=function(){
-            var truoc=idx
-            idx+=1
-            if(idx>4){
-                idx=0
+            var idx
+            idx=0
+            function change_status_carousel(idx){
+                var current_status=home__carousel_status.querySelector(".fa-solid")
+                current_status.classList.remove("fa-solid")
+                current_status.classList.add("fa-regular")
+                carousel_status[idx].classList.remove("fa-regular")
+                carousel_status[idx].classList.add("fa-solid")
+                carousel_imgs.style.left=-idx*1200+"px"
             }
-            var current_status=$(".fa-solid")
-            current_status.classList.remove("fa-solid")
-            current_status.classList.add("fa-regular")
-            carousel_status[idx].classList.remove("fa-regular")
-            carousel_status[idx].classList.add("fa-solid")
-            carousel_imgs.style.left=-idx*1200+"px"
-        }
-        b=setInterval(a,3000)
+            for (let item of carousel_status){
+                item.onclick=function(){
+                    idx=Array.prototype.indexOf.call(carousel_status,this)
+                    change_status_carousel(idx)
+                    clearInterval(b)
+                    b=setInterval(a,3000)
+                }
+            }
+            carousel_left.onclick=function(){
+                var truoc=idx
+                idx-=1
+                if(idx<0){
+                    idx=carousel_status_length
+                }
+                change_status_carousel(idx)
+                clearInterval(b)
+                b=setInterval(a,3000)
+            }
+            carousel_right.onclick=function(){
+                var truoc=idx
+                idx+=1
+                if(idx>carousel_status_length){
+                    idx=0
+                }
+                change_status_carousel(idx)
+                clearInterval(b)
+                b=setInterval(a,3000)
+                
+            }
+            var a=function(){
+                var truoc=idx
+                idx+=1
+                if(idx>carousel_status_length){
+                    idx=0
+                }
+                change_status_carousel(idx)
+            }
+            b=setInterval(a,3000)
+        })
         
 
 

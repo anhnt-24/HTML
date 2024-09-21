@@ -4,27 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
     <div class="main__container">
-        <div id="signup">
-            <a href="/login" class="login_signup-btn btn_hover">
-                Đăng nhập
-            </a>
-            <form class="login__form" action="#"  method="post">
-                <h2 class="login__title">Đăng Kí</h2>
-                <input class="login__input" type="text" name="username" placeholder="Tên đăng nhập" required>
-                <input class="login__input" type="password" name="password" placeholder="Mật khẩu" required>
-                <input class="login__input" type="password" name="confirm_password" placeholder="Xác nhận mật khẩu" required>
-                <input class="login__input" type="text" name="email" placeholder="Email" required>
-                <input class="login__input" type="email" name="phone" placeholder="Số điện thoại" required>
-                <input class="signup__btn login__input btn_hover" type="submit" value="Đăng kí">
-                
-            </form>
-            <p>Tôi đã có tài khoản? <button onclick="" class="signup__login btn_hover" href="">Đăng nhập</button></p>
+        <div style="display: flex; align-items: center; flex-direction: column; min-height: 1000px;">
+
+            <div id="register">
+                <a href="/login" class="login_register-btn link_hover">
+                    Đăng nhập
+                </a>
+                <form id="register__form" class="login__form" action="#"  method="post">
+                    <h2 class="login__title">Đăng Kí</h2>
+            
+                    <div class="register__input-group">
+                        <label for="username">Tên đăng nhập:</label><br>
+                        <input class="login__input" type="text" name="username" id="username" placeholder="Tên đăng nhập" required>
+                    </div>
+                    
+                    <div class="register__input-group">
+                        <label for="password">Mật khẩu:</label><br>
+                        <input class="login__input" type="password" name="password" id="password" placeholder="Mật khẩu" required>
+                    </div>
+                    
+                    <div class="register__input-group">
+                        <label for="confirm_password">Xác nhận mật khẩu:</label><br>
+                        <input class="login__input" type="password" name="confirm_password" id="confirm_password" placeholder="Xác nhận mật khẩu" required>
+                    </div>
+                    
+                    <div class="register__input-group">
+                        <label for="email">Email:</label><br>
+                        <input class="login__input" type="text" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="register__input-group">
+                        <label for="phone">Số điện thoại:</label><br>
+                        <input class="login__input" type="text" name="phone" id="phone" placeholder="Số điện thoại" required>
+                    </div>
+                    
+                    <input class="register__btn login__input btn_hover" type="submit" value="Đăng kí">
+                    
+                </form>
+                <p style="padding-bottom: 12px;" >Tôi đã có tài khoản? <a class="register__login link_hover" href="">Đăng nhập</a></p>
+            </div>
         </div>
     </div>
+    <script src="/js/validate.js"></script>
+    <script>
+
+        Validator({
+            form:'#register__form',
+            rules:[
+                Validator.isRequired('#username'),
+                Validator.isUsername('#username'),
+                Validator.isRequired('#password'),
+                Validator.isPassword('#password'),
+                Validator.isRequired('#confirm_password'),
+                Validator.isConfirmPassword('#confirm_password',function(){
+                    return document.querySelector('#password').value
+                }),
+                Validator.isRequired('#email'),
+                Validator.isEmail('#email'),
+                Validator.isRequired('#phone'),
+                Validator.isPhone('#phone'),
+            ]
+
+        })
+    </script>
+
 </body>
+
 </html>

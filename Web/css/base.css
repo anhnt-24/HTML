@@ -1,6 +1,6 @@
 /* Our custom */
 *{
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "Roboto",'Arial', "Helvetica Neue", Helvetica, sans-serif;
     
 }
 
@@ -13,7 +13,11 @@ body,li,ul,p,a,button,h2,h3{
     text-decoration: none;
     color: inherit;
 }
+h2{
 
+    color: var(--font-1);
+    font-size: 1.7rem;
+}
 body{
     background-color: var(--background-color);
 }
@@ -29,14 +33,19 @@ body{
     flex-direction: column;
 }
 :root{
-    --primary: #a4cfa5;
-    --font:rgb(71, 71, 71);
-    --font-on-b: rgb(82 84 80);
-    --font-on-h:rgb(65, 65, 65);
+    --primary: #04D1A8;
+    --primary-05: #ef4c11;
+    --font-1:#2A274D;
+    --font-2:#79838F;
+    --font-3:#FFFDEF;
     --bg-color:#f8f8f8;
     --footer-color:black;
-    --blue:rgb(57 72 132);
-    --background-color: #acacac21;
+    --link-color:rgb(62, 92, 240);
+    --background-color: #dbdbdb21;
+    --color-hover:green;
+    --btn-color-dis:gray;
+    --box-shadow: 0px 1px 3px 1px #00000030;
+
 }
 .row{
     margin: 0 -12px;
@@ -67,14 +76,22 @@ body{
 .main__container{
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     margin: 80px 46px;
-    min-height: 600px;
+    margin-top: 120px;
+    min-height: 800px;
+    background-color: white;
+
   
 }
 .btn_hover:hover{
-    filter: brightness(80%);
+    background-color: var(--color-hover) ;
+    color: var(--font-3) ;
     cursor: pointer;
+}
+.link_hover:hover{
+    cursor: pointer;
+    color: var(--color-hover) !important;
 }
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -119,4 +136,124 @@ body{
     to{
         opacity: 1;
     }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-1);
+}
+
+.error{
+    min-width: 300px;
+    max-width: 700px;
+    margin-top: 48px;
+    margin-bottom: -48px;
+    border:1px solid red;
+    background-color: rgba(255, 0, 0, 0.034);
+    padding: 14px;
+    color: black;
+    font-size: 1.1rem;
+    border-radius: 2px;
+    white-space: normal;
+    word-break: break-all;
+}
+.validation{
+    color: red;
+    width: 410px;
+    white-space: normal;
+    word-break: keep-all;
+    text-overflow: clip;
+    font-size: 1rem;
+    margin: 4px 0;
+}
+.btn_disable{
+    background-color: var(--btn-color-dis) !important;
+    opacity: 0.6;
+    cursor: default !important;
+}
+.input__error{
+    border: 1.5px solid red !important;
+    outline-color: transparent !important;
+}
+
+.btn__hover:hover  .modal__info{
+    height: 250px;
+    opacity: 1;
+    overflow: visible;
+}
+.modal__info{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 1px 1px 1px #a5a5a5ca;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all linear 0.3s;
+}
+.modal__info-open{
+    height: 250px;
+    opacity: 1;
+    overflow: visible;
+}
+.modal__info-header{
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    height: 58px;
+    background-color: var(--font-1);
+    color: var(--font-3);
+    font-size: 1.6rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px ;
+    font-weight: 500;
+}
+.modal__info-body{
+    margin-top: 12px;
+    width: 95%;
+    height: 110px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid cadetblue;
+    color: var(--font-1);
+}
+.modal__info-btn-container{
+    display: flex;
+    width: 95%;
+    margin-top: 16px;
+    justify-content: flex-end;
+}
+.modal__info-btn{
+    background-color: var(--primary);
+    padding: 8px 24px ;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--font-3);
+    border-radius: 2px;
+}
+.modal__info-btn +.modal__info-btn{
+    margin-left: 12px;
+}
+.modal__info-btn-cancel{
+    background-color: var(--primary-05);
+}
+
+.modal__info-btn-ok{
+    width: 100px;
+}
+input:-webkit-autofill {
+    font-size: 1.1rem;
+    font: inherit;
 }

@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/oder.css">
+    <link rel="stylesheet" href="/css/order.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -14,16 +17,63 @@
             <div class="order__header">
                 <h4 class="order__header-item order__header-active">Tất cả</h4>
                 <h4 class="order__header-item">Chờ xác nhận</h4>
+                <h4 class="order__header-item">Đang xử lí</h4>
                 <h4 class="order__header-item">Đang giao</h4>
-                <h4 class="order__header-item">Chờ thanh toán</h4>
                 <h4 class="order__header-item">Đã giao</h4>
+                <h4 class="order__header-item">Đã hủy</h4>
+
                 <div class="order__header-active-line"></div>
             </div>
             <!-- Order container -->
             <div class="order__container" style="display: block;">
                 <div class="order__item">
                     <p class="order__item-status">
-                        Đang giao hàng
+                        <i class="fa-solid fa-truck-fast"></i> Đang giao hàng
+                    </p>
+                    <div class="order__product-container" >
+                        <div class="order__product-img">
+                            <img src="/assets/Mu_shirt.png" alt="" height="150" style="margin-right: 24px;">
+                            <div style="align-self: flex-start;">
+                                <h3 class="order__product-title">
+                                    Áo thi đấu Mu dadasdasdasdfasdfasdffffffadfkjaskdlfjalkdjfkalsdjfklasjfklasjfklasjfkla nguyen tuan anah anaah aa a s a a sjflkasfjalskjfffffffffffffffffffffffffffffffffffffffffffffff
+                                </h3>
+                                <span>
+                                    Phân loại hàng : Đỏ, S
+                                </span>
+                                <br>
+                                <span>x1</span>
+                                <br>
+                                <small style="color: #5ADAC8; border: 1px solid #5ADAC8; padding: 2px;">Trả hàng miễn phí 15 ngày</small>
+                            </div>
+                        </div>
+                        <div style="display: flex;">
+                            <del style="margin-right: 12px;">300.000đ</del>
+                            <span style="color: red; font-size: 1.3rem; font-weight: 500;"> 99.000đ</span>
+                        </div>
+                    </div>
+                    <div class="order__total">
+                        <p style="line-height: 1.6rem;">
+                            <strong>Đặt hàng lúc:</strong> 19:50 27/2/2004
+                            <br><Strong>Hủy đơn lúc:</Strong> 19:50 27/2/2004
+                            <br><Strong>Nhận hàng lúc:</Strong> 19:50 27/2/2004
+                        </p>
+                        <span style="margin-right: 12px;">
+                            Thành tiền:
+                            <strong style="font-size: 1.6rem; color: red;"> 99.000đ</strong>
+                        </span>
+                    </div>
+                    <div class="order__btn-container">
+                        <button class="order__btn order__btn-cancel btn_hover btn_disable" onclick="openModal('chaoemanh')" >Hủy đơn hàng</button>
+                        <button class="order__btn order__btn-approve btn_hover">Đã nhận được hàng</button>
+                        <button class="order__btn order__btn-buyagain btn_hover">Mua lại</button>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="order__container" style="display: block;">
+                <div class="order__item">
+                    <p class="order__item-status">
+                        <i class="fa-solid fa-truck-fast"></i> Đang giao hàng
                     </p>
                     <div class="order__product-container">
                         <div class="order__product-img">
@@ -47,10 +97,20 @@
                         </div>
                     </div>
                     <div class="order__total">
+                        <p style="line-height: 1.6rem;">
+                            <strong>Đặt hàng lúc:</strong> 19:50 27/2/2004
+                            <br><Strong>Hủy đơn lúc:</Strong> 19:50 27/2/2004
+                            <br><Strong>Nhận hàng lúc:</Strong> 19:50 27/2/2004
+                        </p>
                         <span style="margin-right: 12px;">
                             Thành tiền:
+                            <strong style="font-size: 1.6rem; color: red;"> 99.000đ</strong>
                         </span>
-                        <strong style="font-size: 1.6rem; color: red;"> 99.000đ</strong>
+                    </div>
+                    <div class="order__btn-container">
+                        <button class="order__btn order__btn-cancel btn_hover" >Hủy đơn hàng</button>
+                        <button class="order__btn order__btn-approve btn_hover">Đã nhận được hàng</button>
+                        <button class="order__btn order__btn-buyagain btn_hover">Mua lại</button>
                     </div>
                 </div>
             </div>
@@ -77,8 +137,7 @@
                             </div>
                         </div>
                         <div>
-                            <del>300.000đ</del>
-                            <span style="color: red; font-size: 1.2rem;">99.000đ</span>
+                            <span style="color: red; font-size: 1.2rem; font-weight: 500;">99.000đ</span>
                         </div>
                     </div>
                     <div class="order__total">
@@ -154,6 +213,10 @@
                             Thành tiền:
                         </span>
                         <strong style="font-size: 1.6rem; color: red;"> 99.000đ</strong>
+                    </div>
+                    <div>
+                        <button>Hủy đơn hàng</button>
+
                     </div>
                 </div>
             </div>
@@ -297,29 +360,105 @@
              
         </div>
     </div>    
+    <div class="modal">
+        <form action="" class="order__cancel-form">
+            <h3 class="order__cancel-form-header">Cho chúng tôi biết lí do bạn hủy đơn</h3>
+            <div class="order__cancel-form-container">
+                <div class="order__cancel-form-group">
+                    <input type="checkbox" name="reasoneforcancel[]" style="transform: scale(1.23);">
+                    <label class="order__cancel-form-label" for="">Sản phẩm như cc</label>
+                </div>
+                <div class="order__cancel-form-group">
+                    <input type="checkbox" name="reasoneforcancel[]" style="transform: scale(1.23);">
+                    <label class="order__cancel-form-label" for="">Sản phẩm như cc</label>
+                </div>
+                <div class="order__cancel-form-group">
+                    <input type="checkbox" name="reasoneforcancel[]" style="transform: scale(1.23);">
+                    <label class="order__cancel-form-label" for="">Sản phẩm như cc</label>
+                </div>
+                <div class="order__cancel-form-group">
+                    <input type="checkbox" name="reasoneforcancel[]" style="transform: scale(1.23);">
+                    <label class="order__cancel-form-label" for="">Sản phẩm như cc</label>
+                </div>
+                <div class="order__cancel-form-group">
+                    <input type="checkbox" name="reasoneforcancel[]" style="transform: scale(1.23);">
+                    <label class="order__cancel-form-label" for="">Sản phẩm như cc</label>
+                </div>
+                <div class="order__cancel-form-group">
+                    <input type="checkbox" name="reasoneforcancel[]" style="transform: scale(1.23);">
+                    <label class="order__cancel-form-label" for="">Sản phẩm như cc</label>
+                </div>
+                <div class="order__cancel-form-group">
+                    <input type="checkbox" name="reasoneforcancel[]" style="transform: scale(1.23);">
+                    <label class="order__cancel-form-label" for="">Sản phẩm như cc</label>
+                </div>
+                <div class="order__cancel-form-group">
+                    <input type="checkbox" name="reasoneforcancel[]" style="transform: scale(1.23);">
+                    <label class="order__cancel-form-label" for="">Sản phẩm như cc</label>
+                </div >
+               
+                
+                <div class="order__cancel-form-group">
+                    <label style="font-weight: 500; line-height: 2rem;" class="order__cancel-form-label" for="">Lý do khác:</label>
+                    <textarea placeholder="Vui lòng góp ý" class="order__cancel-form-textarea" name="cc" id=""></textarea>
+                </div>
+            </div>
+            <div class="order__cancel-form-btn-container">
+                <button class="order__cancel-form-btn btn_hover">
+                    Xác nhận
+                </button>
+                <button type="button" onclick="closeModal()" class="order__cancel-form-btn order__cancel-form-btn-cancel btn_hover">
+                    Hủy
+                </button>
+            </div>
+            
+        </form>
+    </div>
 </body>
-<script>
-    $=document.querySelector.bind(document)
-    $$=document.querySelectorAll.bind(document)
-    var order__container=$$('.order__container')
-    var order_header_item=$$('.order__header-item')
-    var trc=0
-    for(let item of order_header_item){
-        item.onclick=function(){
-            let idx=Array.prototype.indexOf.call(order_header_item,this)
-            order__container[trc].style.display='none'
-            order__container[idx].style.display='block'
-            trc=idx
-            console.log(idx)
-            let order_header_active_line=$('.order__header-active-line')
-            order_header_active_line.style.left=this.offsetLeft+'px'
-            order_header_active_line.style.width=this.offsetWidth+'px'
-            let order__header_active=$('.order__header-active')
-            order__header_active.classList.remove('order__header-active')
-            this.classList.add('order__header-active')
-        }
-    }
-    
 
+<script>
+    window.addEventListener('load',(e)=>{
+        _$=document.querySelector.bind(document)
+        _$$=document.querySelectorAll.bind(document)
+        var order__container=_$$('.order__container')
+        var order_header_item=_$$('.order__header-item')
+        var trc=0
+        let order_header_active_line=_$('.order__header-active-line')
+        order_header_active_line.style.left=order_header_item[0].offsetLeft+'px'
+        order_header_active_line.style.width=order_header_item[0].offsetWidth+'px'
+
+        for(let item of order_header_item){
+            item.onclick=function(){
+                let idx=Array.prototype.indexOf.call(order_header_item,this)
+                order__container[trc].style.display='none'
+                order__container[idx].style.display='block'
+                trc=idx
+                console.log(idx)
+                let order_header_active_line=_$('.order__header-active-line')
+                order_header_active_line.style.left=this.offsetLeft+'px'
+                order_header_active_line.style.width=this.offsetWidth+'px'
+                let order__header_active=_$('.order__header-active')
+                order__header_active.classList.remove('order__header-active')
+                this.classList.add('order__header-active')
+            }
+        }
+    })
+    
+    
+</script>
+
+<script src="https://esgoo.net/scripts/jquery.js"></script>
+<script>
+    function openModal(url){
+        $('.modal').css('display','flex')
+    }
+
+    function closeModal(){
+        $('.modal').css('display','none')
+        $.each($('.modal').find('input[type="checkbox"]'),function(){
+            this.checked=false            
+        })
+        $('.modal').find('textarea').val('')
+    }
 </script>
 </html>
